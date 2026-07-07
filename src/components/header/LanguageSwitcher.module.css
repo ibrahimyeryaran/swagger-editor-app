@@ -1,0 +1,18 @@
+.wrapper {
+  display: inline-flex;
+}
+
+.select {
+  background: transparent;
+  color: var(--color-header-text);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: var(--radius);
+  padding: 4px 8px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.select option {
+  color: var(--color-text);
+}
