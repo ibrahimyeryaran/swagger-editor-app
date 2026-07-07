@@ -41,6 +41,7 @@ export function EndpointItem({ doc, endpoint, serverUrls }: EndpointItemProps) {
         className={styles.summaryRow}
         onClick={() => setOpen((value) => !value)}
         aria-expanded={open}
+        aria-label={`${method.toUpperCase()} ${path}`}
       >
         <span className={`${styles.method} ${styles[method] ?? ''}`}>{method.toUpperCase()}</span>
         <code className={styles.path}>{path}</code>
