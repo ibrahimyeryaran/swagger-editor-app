@@ -1,0 +1,26 @@
+.wrapper {
+  flex: 1;
+  min-height: 320px;
+  display: flex;
+  flex-direction: column;
+}
+
+.wrapper > div {
+  flex: 1;
+  height: 100%;
+}
+
+.wrapper :global(.cm-editor) {
+  height: 100%;
+  font-size: 13px;
+}
+
+.wrapper :global(.cm-editor.cm-focused) {
+  outline: none;
+}
+
+.loading {
+  flex: 1;
+  min-height: 320px;
+  background: var(--color-code-bg);
+}
