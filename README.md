@@ -2,7 +2,7 @@
 
 A **Swagger/OpenAPI UI with REST client capabilities** built for the [RS School React course final task](https://rs.school/courses/reactjs). Edit OpenAPI specifications in JSON or YAML, browse the endpoints they define, and execute real requests through a CORS-free server-side proxy.
 
-**Live demo:** _link will be added after deployment_
+**Live demo:** [https://swagger-editor-app-umber.vercel.app](https://swagger-editor-app-umber.vercel.app)
 
 ## Features
 
