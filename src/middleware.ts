@@ -42,12 +42,16 @@ export async function middleware(request: NextRequest) {
     data: { user },
   } = await supabase.auth.getUser();
 
-  const path = stripLocale(request.nextUrl.pathname);
+  const pathname = request.nextUrl.pathname;
+  const path = stripLocale(pathname);
   const isPrivate = PRIVATE_PATHS.some((p) => path === p || path.startsWith(`${p}/`));
   const isAuthRoute = AUTH_PATHS.some((p) => path === p || path.startsWith(`${p}/`));
 
   if ((isPrivate && !user) || (isAuthRoute && user)) {
-    return NextResponse.redirect(new URL('/', request.url));
+    // Preserve the locale prefix when sending the user back to the main page.
+    const localeMatch = pathname.match(/^\/(en|tr)(\/|$)/);
+    const mainPage = localeMatch ? `/${localeMatch[1]}` : '/';
+    return NextResponse.redirect(new URL(mainPage, request.url));
   }
 
   return response;
