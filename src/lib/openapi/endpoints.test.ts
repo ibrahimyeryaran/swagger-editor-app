@@ -6,7 +6,7 @@ import {
   resolveRef,
   resolveSchema,
 } from './endpoints';
-import type { OpenApiDocument, SchemaObject } from './types';
+import type { OpenApiDocument, ParameterObject, SchemaObject } from './types';
 
 const doc: OpenApiDocument = {
   openapi: '3.0.0',
@@ -69,9 +69,15 @@ describe('resolveSchema', () => {
 
 describe('resolveMaybeRef', () => {
   it('resolves referenced objects and keeps plain ones', () => {
-    expect(resolveMaybeRef(doc, { $ref: '#/components/parameters/ApiKey' }).name).toBe('X-Api-Key');
-    expect(resolveMaybeRef(doc, { name: 'inline', in: 'query' }).name).toBe('inline');
-    expect(resolveMaybeRef(doc, { $ref: '#/missing' })).toEqual({ $ref: '#/missing' });
+    expect(
+      resolveMaybeRef<ParameterObject>(doc, { $ref: '#/components/parameters/ApiKey' }).name
+    ).toBe('X-Api-Key');
+    expect(resolveMaybeRef<ParameterObject>(doc, { name: 'inline', in: 'query' }).name).toBe(
+      'inline'
+    );
+    expect(resolveMaybeRef<ParameterObject>(doc, { $ref: '#/missing' })).toEqual({
+      $ref: '#/missing',
+    });
   });
 });
 

@@ -11,14 +11,6 @@ export function renderWithIntl(ui: ReactNode): RenderResult {
   );
 }
 
-export function wrapWithIntl(ui: ReactNode): ReactNode {
-  return (
-    <NextIntlClientProvider locale="en" messages={messages}>
-      {ui}
-    </NextIntlClientProvider>
-  );
-}
-
 export function getMessage(namespace: string, key: string): string {
   const segments = `${namespace}.${key}`.split('.');
   let current: unknown = messages;

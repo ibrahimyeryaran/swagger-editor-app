@@ -57,7 +57,7 @@ describe('supabase server client', () => {
       throw new Error('read-only');
     });
     await createServer();
-    const options = vi.mocked(createServerClient).mock.calls[0][2] as {
+    const options = vi.mocked(createServerClient).mock.calls[0][2] as unknown as {
       cookies: { setAll: (list: { name: string; value: string }[]) => void };
     };
     expect(() => options.cookies.setAll([{ name: 'a', value: 'b' }])).not.toThrow();
