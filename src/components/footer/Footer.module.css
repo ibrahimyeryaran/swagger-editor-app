@@ -1,0 +1,32 @@
+.footer {
+  background: var(--color-header);
+  color: rgba(242, 243, 248, 0.75);
+  margin-top: auto;
+}
+
+.inner {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 16px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+  font-size: 13px;
+}
+
+.links {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.link {
+  color: rgba(242, 243, 248, 0.75);
+  font-weight: 500;
+}
+
+.link:hover {
+  color: #fff;
+}

@@ -1,0 +1,97 @@
+.split {
+  flex: 1;
+  display: grid;
+  gap: 16px;
+  padding: 16px;
+  max-width: 1400px;
+  width: 100%;
+  margin: 0 auto;
+  /* Horizontal split when the viewport is wider than tall */
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  align-items: start;
+}
+
+@media (orientation: portrait) {
+  .split {
+    /* Vertical split when the viewport is taller than wide */
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+.pane {
+  display: flex;
+  flex-direction: column;
+  min-height: 480px;
+  overflow: hidden;
+}
+
+.toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 10px 14px;
+  border-bottom: 1px solid var(--color-border);
+  background: var(--color-surface);
+  flex-wrap: wrap;
+}
+
+.paneTitle {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.toolbarActions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.formatSwitch {
+  display: inline-flex;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.formatButton {
+  padding: 5px 12px;
+  border: none;
+  background: var(--color-surface);
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--color-text-muted);
+}
+
+.formatButton:hover {
+  background: var(--color-primary-soft);
+}
+
+.formatActive {
+  background: var(--color-primary);
+  color: #fff;
+}
+
+.formatActive:hover {
+  background: var(--color-primary);
+}
+
+.editorArea {
+  flex: 1;
+  min-height: 320px;
+  display: flex;
+  flex-direction: column;
+}
+
+.viewerArea {
+  flex: 1;
+  overflow: auto;
+  max-height: calc(100vh - var(--header-height) - 140px);
+}
+
+@media (orientation: portrait) {
+  .viewerArea {
+    max-height: none;
+  }
+}

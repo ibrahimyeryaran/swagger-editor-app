@@ -1,0 +1,165 @@
+.page {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 24px 20px 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.title {
+  margin: 0;
+  font-size: 26px;
+}
+
+.subtitle {
+  margin: -8px 0 0;
+  color: var(--color-text-muted);
+}
+
+.backLink {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 12px;
+}
+
+.statCard {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.statValue {
+  font-size: 24px;
+  font-weight: 800;
+  color: var(--color-primary);
+}
+
+.statLabel {
+  font-size: 13px;
+  color: var(--color-text-muted);
+}
+
+.tableCard {
+  overflow-x: auto;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+
+.table th,
+.table td {
+  text-align: left;
+  padding: 10px 14px;
+  border-bottom: 1px solid var(--color-border);
+  vertical-align: top;
+}
+
+.table th {
+  font-size: 12px;
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.nowrap {
+  white-space: nowrap;
+}
+
+.method {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 6px;
+  background: var(--color-primary-soft);
+  color: var(--color-primary);
+  font-weight: 700;
+  font-size: 12px;
+}
+
+.url {
+  word-break: break-all;
+  font-family: var(--font-mono);
+  font-size: 12px;
+}
+
+.status {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 6px;
+  font-weight: 700;
+  font-size: 12px;
+}
+
+.statusOk {
+  background: var(--color-success-soft);
+  color: var(--color-success);
+}
+
+.statusFail {
+  background: var(--color-danger-soft);
+  color: var(--color-danger);
+}
+
+.empty {
+  padding: 32px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: center;
+}
+
+.emptyTitle {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.emptyHint {
+  margin: 0;
+  color: var(--color-text-muted);
+}
+
+.emptyActions {
+  display: flex;
+  gap: 10px;
+  margin-top: 8px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.detailCard {
+  padding: 20px;
+}
+
+.detailList {
+  margin: 0;
+  display: grid;
+  grid-template-columns: minmax(120px, 180px) 1fr;
+  gap: 10px 16px;
+  font-size: 14px;
+}
+
+.detailList dt {
+  font-weight: 700;
+  color: var(--color-text-muted);
+}
+
+.detailList dd {
+  margin: 0;
+  word-break: break-word;
+}

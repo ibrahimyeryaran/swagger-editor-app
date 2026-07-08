@@ -1,0 +1,64 @@
+.form {
+  width: 100%;
+  max-width: 400px;
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.title {
+  margin: 0;
+  font-size: 24px;
+  text-align: center;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.label {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--color-text-muted);
+}
+
+.input {
+  padding: 9px 12px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  background: var(--color-surface);
+  transition: border-color 0.15s ease;
+}
+
+.input:focus {
+  outline: none;
+  border-color: var(--color-primary);
+}
+
+.input[aria-invalid='true'] {
+  border-color: var(--color-danger);
+}
+
+.error {
+  color: var(--color-danger);
+  font-size: 12px;
+}
+
+.serverError {
+  margin: 0;
+  padding: 10px 12px;
+  border-radius: var(--radius);
+  background: var(--color-danger-soft);
+  color: var(--color-danger);
+  font-size: 13px;
+}
+
+.switch {
+  margin: 0;
+  text-align: center;
+  font-size: 13px;
+  color: var(--color-text-muted);
+}

@@ -1,0 +1,86 @@
+.page {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 24px 20px 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.title {
+  margin: 0;
+  font-size: 26px;
+}
+
+.section {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: flex-start;
+}
+
+.heading {
+  margin: 0;
+  font-size: 18px;
+}
+
+.text {
+  margin: 0;
+  color: var(--color-text-muted);
+  line-height: 1.6;
+}
+
+.member {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.avatar {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: var(--color-primary);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 18px;
+  flex-shrink: 0;
+}
+
+.memberInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.memberName {
+  font-weight: 700;
+}
+
+.memberRole {
+  color: var(--color-text-muted);
+  font-size: 13px;
+}
+
+.techList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.tech {
+  padding: 4px 12px;
+  border-radius: 14px;
+  background: var(--color-primary-soft);
+  color: var(--color-primary);
+  font-size: 13px;
+  font-weight: 600;
+}
